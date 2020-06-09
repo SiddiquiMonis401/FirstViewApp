@@ -17,16 +17,14 @@
         }
     </style>
     <div id="app">
-        <label htmlFor="name">
-            Name:
-        </label>
-        <input id="name" type="text" v-model="name">
-        <span>{{ name }}</span>
-        <label htmlFor="age">
-            Age:
-        </label>
-        <input id="age" type="text" v-model="age">
-        <span>{{ age }}</span>
+        <h3> Computed Properties </h3>
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+        <p>A- {{ a }}</p>
+        <p>B- {{ b }}</p>
+        <p>Age + A = {{ addToA }}</p>
+        <p>Age + B = {{ addToB }}</p>
+
     </div>
 
     <script src="App.js">
