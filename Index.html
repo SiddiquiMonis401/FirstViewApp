@@ -8,22 +8,22 @@
 
 <body>
     <style>
-        .canvas {
-            height: 800px;
-            width: 1000px;
-            border: 1px solid red;
-            text-align: center;
-            padding-top: 500px;
+        .red {
+            color: red ;
+            font-size: 4rem;
+            transition:all 0.5s ease-out;
+        }
+        .blue {
+            color: blue ;
         }
     </style>
     <div id="app">
-        <h3> Computed Properties </h3>
-        <button v-on:click="a++">Add to A</button>
-        <button v-on:click="b++">Add to B</button>
-        <p>A- {{ a }}</p>
-        <p>B- {{ b }}</p>
-        <p>Age + A = {{ addToA }}</p>
-        <p>Age + B = {{ addToB }}</p>
+        <h6> Example Of Dynamic Classes </h6>
+        <div v-bind:class="{red: isRed, blue:isBlue}">This 1st example of dynamic class</div>
+        <div v-bind:class="{red: isRed, blue:isBlue}">This 2nd example of dynamic class</div>
+        <button v-on:click="setRed">
+            SetClass
+        </button>
 
     </div>
 

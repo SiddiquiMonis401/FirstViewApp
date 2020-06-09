@@ -1,12 +1,14 @@
 new Vue({
   el: '#app',
   data: {
-      age:10,
-      a:0,
-      b:0,
+      isRed:false,
+      isBlue:true,
   },
   methods: {
-   
+   setRed: function () {
+       this.isRed = !this.isRed;
+       this.isBlue = !this.isBlue;
+   }
 
   },
   computed:{
