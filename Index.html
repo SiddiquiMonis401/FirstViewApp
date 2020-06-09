@@ -7,24 +7,14 @@
 </head>
 
 <body>
-    <style>
-        .red {
-            color: red ;
-            font-size: 4rem;
-            transition:all 0.5s ease-out;
-        }
-        .blue {
-            color: blue ;
-        }
-    </style>
     <div id="app">
-        <h6> Example Of Dynamic Classes </h6>
-        <div v-bind:class="{red: isRed, blue:isBlue}">This 1st example of dynamic class</div>
-        <div v-bind:class="{red: isRed, blue:isBlue}">This 2nd example of dynamic class</div>
-        <button v-on:click="setRed">
-            SetClass
-        </button>
-
+       <h1>Conditional Rendering</h1>
+       <button v-on:click="isError = !isError">Toggle Error</button>
+       <button v-on:click="isSuccess = !isSuccess">Toggle Success</button>
+       <p  v-if="isError">This is Error Message</p>
+       <p  v-if="isSuccess">This is Success Message</p>
+       <p  v-show="isError">This is Error Message</p>
+       <p  v-show="isSuccess">This is Success Message</p>
     </div>
 
     <script src="App.js">
