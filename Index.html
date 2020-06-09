@@ -17,15 +17,16 @@
         }
     </style>
     <div id="app">
-      <label htmlFor="name">
-          Name:
-      </label>
-      <input id="name" type="text" v-on:keyup.enter="logName">
-      
-      <label htmlFor="age">
-        Age:
-    </label>
-    <input id="age" type="text" v-on:keydown.alt.enter="logAge" > 
+        <label htmlFor="name">
+            Name:
+        </label>
+        <input id="name" type="text" v-model="name">
+        <span>{{ name }}</span>
+        <label htmlFor="age">
+            Age:
+        </label>
+        <input id="age" type="text" v-model="age">
+        <span>{{ age }}</span>
     </div>
 
     <script src="App.js">
