@@ -9,15 +9,10 @@
     <style>
     </style>
     <div id="vue-app-one" class="container">
-        {{ title }}
-        {{ greet }}          
-    
+       <Greeting></Greeting>
     </div>
     <div id="vue-app-two" >
-        {{ title }}
-        {{ greet }}
-        <button v-on:click="changeAppOneTitle('he')">Change app one title</button>          
-    
+        <Greeting></Greeting>
     </div>
 
     <script src="App.js">
