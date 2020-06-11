@@ -8,13 +8,11 @@
 <body>
     <style>
     </style>
-    <div id="vue-app-one" class="container">
-       <Greeting></Greeting>
-    </div>
-    <div id="vue-app-two" >
-        <Greeting></Greeting>
-    </div>
-
+    <div id="vue-app" class="container">
+     <input type="text" ref="input" />
+     <button v-on:click="changeFood">Submit</button>
+     <p>Your favourite Food is : {{favouriteFood}}</p>  
+ 
     <script src="App.js">
 
     </script>
