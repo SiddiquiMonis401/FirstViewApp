@@ -7,35 +7,17 @@
 </head>
 <body>
     <style>
-        .container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .unPunchedImage{
-            height:300px;
-            width: 100px;
-            transition: all 0.25s ease-in-out;
-        }
-        .punchedImage{
-            transform: rotateY(-90deg);
-            transform: rotateX(-90deg);
-            transform: rotateZ(-90deg);
-        }
     </style>
-    <div id="app" class="container">
-        <h6>PunchBag Game</h6>
-        <img  v-if="!isPunched" src="userScreen.png" />
-        <img v-bind:class={unPunchedImage:true,punchedImage:punchedImage} v-if="isPunched" src="bag-burst.png" />
-        <p>You have punched the bag {{ punchedCount }}</p>
-        <div>
-            <button v-on:click="setAndCountPunch">Punched</button>
-            {{ ' ' }}
-            <button v-on:click="resetCount">Reset</button>
-        </div>
-        
-
+    <div id="vue-app-one" class="container">
+        {{ title }}
+        {{ greet }}          
+    
+    </div>
+    <div id="vue-app-two" >
+        {{ title }}
+        {{ greet }}
+        <button v-on:click="changeAppOneTitle('he')">Change app one title</button>          
+    
     </div>
 
     <script src="App.js">

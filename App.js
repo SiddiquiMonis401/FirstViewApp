@@ -1,36 +1,29 @@
-new Vue({
-  el: '#app',
-  data: {
-    isPunched: false,
-    punchedCount: 0,
-    punchedImage:false,
-  },
-  methods: {
-    setAndCountPunch: function () {
-        if(this.punchedImage){
-            return;
-        }
-        if(!this.isPunched)
-        {
-            this.isPunched = true;
-        }
-        this.punchedCount ++;
-        this.punchedImage = true;
-        setTimeout(()=>{
-            console.log("executed")
-            this.punchedImage = false;
-
-        },500)
-
+let one = new Vue({
+    el:"#vue-app-one",
+    data: {
+        title: "View App One",
     },
-
-    resetCount: function() {
-        this.punchedCount = 0;
-        this.punchedImage = false;
-        this.isPunched = false; 
+    computed: {
+        greet: function () {
+            return ("Hello from View app one");
+        }
     }
-  },
-  computed:{
+});
 
-  }
+let two = new Vue({
+    el:"#vue-app-two",
+    data: {
+        title: "View App Two",
+    },
+    methods: {
+       changeAppOneTitle: function (title) {
+        one.title = title;
+       }
+    },
+    computed: {
+        greet: function () {
+            return ("Hello from View app two");
+        }
+    }
 })
+
